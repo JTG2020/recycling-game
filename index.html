@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕹️ RECYCLE RUSH - ARCADE EDITION 🕹️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🕹️ RECYCLE RUSH 🕹️</h1>
+            <div class="score-board">
+                <span class="score">SCORE: <span id="score">0</span></span>
+                <span class="level">LEVEL: <span id="level">1</span></span>
+                <span class="lives">LIVES: <span id="lives">❤️❤️❤️❤️❤️</span></span>
+                <span class="time">TIME: <span id="time">5:00</span></span>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="playBtn" class="control-btn play-btn">🎮 PLAY</button>
+            <button id="endBtn" class="control-btn end-btn" style="display: none;">🛑 END GAME</button>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="1000" height="600"></canvas>
+            <div class="high-score-panel">
+                <h3>🏆 HIGH SCORE</h3>
+                <div class="high-score-value" id="highScore">0</div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <p>>>> DRAG ITEMS TO CORRECT BINS <<<</p>
+            <p>*** SAVE THE PLANET - SCORE POINTS ***</p>
+            <p>+++ NON-RECYCLABLES GO TO TRASH +++</p>
+        </div>
+    </div>
+    
+    <div id="gameOverModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>>>> GAME OVER <<<</h2>
+            <p id="gameOverReason"></p>
+            <p>FINAL SCORE: <span id="finalScore">0</span></p>
+            <p id="newHighScore" style="display: none; color: #ffff00; font-weight: bold;">*** NEW HIGH SCORE! ***</p>
+            <button id="restartBtn" class="restart-btn">🔄 PLAY AGAIN</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
